@@ -161,3 +161,5 @@ SIMPLE_JWT = {
 GRAPHENE = {
     "SCHEMA": "graphql_api.schema.schema"
 }
+
+AUTH_USER_MODEL = "users.User"

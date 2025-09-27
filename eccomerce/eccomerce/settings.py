@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "products",
     "users",
+    "graphql_api",
     "rest_framework",
     "rest_framework_simplejwt",
     "drf_yasg",

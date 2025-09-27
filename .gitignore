@@ -1,0 +1,25 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+myenv/
+
+# Environment variables
+.env
+
+# SQLite database (if used locally)
+db.sqlite3
+
+# Static & media (can be generated)
+staticfiles/
+media/
+
+# VSCode / IDE configs
+.vscode/
+.idea/
+
+# Logs
+*.log

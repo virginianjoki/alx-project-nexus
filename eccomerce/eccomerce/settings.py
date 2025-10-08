@@ -121,11 +121,26 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # eccomerce/settings.py
+# eccomerce/settings.py
+
 REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10,
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
+
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 10,
+
+    "DEFAULT_FILTER_BACKENDS": [
+        "django_filters.rest_framework.DjangoFilterBackend"
+    ],
+
+    # # Only JSON renderer to avoid template errors
+    # "DEFAULT_RENDERER_CLASSES": (
+    #     "rest_framework.renderers.JSONRenderer",
+    # ),
 }
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
@@ -149,11 +164,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": (
-        "rest_framework_simplejwt.authentication.JWTAuthentication",
-    ),
-}
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),

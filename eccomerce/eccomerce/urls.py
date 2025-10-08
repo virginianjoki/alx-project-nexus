@@ -18,7 +18,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from products.views import ProductViewSet, CategoryViewSet
+# from products.views import ProductViewSet, CategoryViewSet
 from users.views import RegisterView, MyTokenObtainPairView
 from rest_framework_simplejwt.views import TokenRefreshView
 from drf_yasg.views import get_schema_view
@@ -27,8 +27,8 @@ from graphene_django.views import GraphQLView
 from django.views.decorators.csrf import csrf_exempt
 
 router = routers.DefaultRouter()
-router.register(r'products', ProductViewSet)
-router.register(r'categories', CategoryViewSet)
+# router.register(r'products', ProductViewSet)
+# router.register(r'categories', CategoryViewSet)
 
 schema_view = get_schema_view(
     openapi.Info(
